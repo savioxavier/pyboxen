@@ -83,8 +83,8 @@ def boxen(
     style: str = "rounded",
     padding: Union[int, tuple[int]] = 0,
     margin: Union[int, tuple[int]] = 0,
-    align: Literal["left", "center", "right"] = "center",
-    box_align: Literal["left", "center", "right"] = "left",
+    text_alignment: Literal["left", "center", "right"] = "center",
+    box_alignment: Literal["left", "center", "right"] = "left",
     title: str = None,
     title_alignment: Literal["left", "center", "right"] = "left",
     subtitle: str = None,
@@ -140,12 +140,16 @@ def boxen(
             and style.lower() not in ALL_BOXES.keys()
         ):
             raise ValueError(f"style must be one of {ALL_BOXES.keys()}")
-        if align and not isinstance(align, str) and align not in POSITION_TYPES:
+        if (
+            text_alignment
+            and not isinstance(text_alignment, str)
+            and text_alignment not in POSITION_TYPES
+        ):
             raise ValueError(f"text alignment must be one of {POSITION_TYPES}")
         if (
-            box_align
-            and not isinstance(box_align, str)
-            and box_align not in POSITION_TYPES
+            box_alignment
+            and not isinstance(box_alignment, str)
+            and box_alignment not in POSITION_TYPES
         ):
             raise ValueError(f"box alignment must be one of {POSITION_TYPES}")
         if (
@@ -169,7 +173,7 @@ def boxen(
         return Align(
             Margin(
                 Panel(
-                    renderable=Align(Group(*text), align=align),
+                    renderable=Align(Group(*text), align=text_alignment),
                     box=ALL_BOXES[style.lower()],
                     border_style=color,
                     expand=fullwidth,
@@ -182,7 +186,7 @@ def boxen(
                 ),
                 pad=make_margin(margin),
             ),
-            align=box_align,
+            align=box_alignment,
         )
 
     with console.capture() as capture:
