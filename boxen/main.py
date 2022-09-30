@@ -169,7 +169,7 @@ def boxen(
 
     validate_args()
 
-    def make_panel() -> Panel:
+    def build_box() -> Panel:
         return Align(
             Margin(
                 Panel(
@@ -190,6 +190,6 @@ def boxen(
         )
 
     with console.capture() as capture:
-        console.print(make_panel())
+        console.print(build_box())
 
     return capture.get()
