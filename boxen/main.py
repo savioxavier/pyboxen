@@ -92,28 +92,27 @@ def boxen(
     fullwidth: bool = False,
 ):
     """
-    It takes a bunch of arguments,
-    validates them, and then returns a string of the rendered box
+    Create a customizable box to be displayed in the terminal
 
-    :param: *text: Any
+    :param: *text: A variable set of strings to display in the box, or any other Rich renderable(s)
     :type: Any
-    :param color: The color of the box, defaults to white
+    :param color: The color of the box in color or hex code starting with #, defaults to white
     :type color: str (optional)
-    :param style: The style of the box. Can be one of the following:, defaults to rounded
+    :param style: The style of the box, defaults to rounded
     :type style: str (optional)
-    :param padding: The padding between the text and the box, defaults to 0
+    :param padding: The padding between the text and the box in int or tuple of ints, defaults to 0
     :type padding: Union[int, tuple[int]] (optional)
-    :param margin: The margin around the box, defaults to 0
+    :param margin: The margin around the box in int or tuple of ints, defaults to 0
     :type margin: Union[int, tuple[int]] (optional)
-    :param align: The alignment of the text inside the box, defaults to center
-    :type align: Literal["left", "center", "right"] (optional)
-    :param box_align: The alignment of the box, defaults to left
-    :type box_align: Literal["left", "center", "right"] (optional)
-    :param title: The title of the box
+    :param text_alignment: The alignment of the text inside the box, defaults to center
+    :type text_alignment: Literal["left", "center", "right"] (optional)
+    :param box_alignment: The alignment of the box in the terminal, defaults to left
+    :type box_alignment: Literal["left", "center", "right"] (optional)
+    :param title: The title of the box, displayed on the top of the box, if provided
     :type title: str
     :param title_alignment: The alignment of the title, defaults to left
     :type title_alignment: Literal["left", "center", "right"] (optional)
-    :param subtitle: str = None,
+    :param subtitle: str The subtitle of the box, displayed on the bottom of the box, if provided
     :type subtitle: str
     :param subtitle_alignment: The alignment of the subtitle, defaults to left
     :type subtitle_alignment: Literal["left", "center", "right"] (optional)
