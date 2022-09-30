@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "boxen"
+version = "0.1.0"
+description = "Beautiful, customizable boxes in your terminal using Python"
+authors = ["Skyascii <savioxavier112@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/savioxavier/pyboxen"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rich = "^12.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
