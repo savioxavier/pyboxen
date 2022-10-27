@@ -12,7 +12,7 @@ It's built on top of [Rich](https://github.com/Textualize/rich/), and features a
 Using [pip](https://pypi.org/)
 
 ```text
-pip install boxen
+pip install pyboxen
 ```
 
 ---
@@ -22,7 +22,7 @@ pip install boxen
 - Simplest of simple boxes
 
 ```py
-from boxen import boxen
+from pyboxen import boxen
 
 print(boxen("Python is cool!"))
 ```
@@ -32,7 +32,7 @@ print(boxen("Python is cool!"))
 - Define options
 
 ```py
-from boxen import boxen
+from pyboxen import boxen
 
 print(
     boxen(
@@ -53,7 +53,7 @@ print(
 > Example: `[red]Hello[/red] [bold italic]World[/]`
 
 ```py
-from boxen import boxen
+from pyboxen import boxen
 
 # Multiple texts
 
@@ -107,7 +107,7 @@ print(
 - Title and subtitles
 
 ```py
-from boxen import boxen
+from pyboxen import boxen
 
 print(
     boxen(
