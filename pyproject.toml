@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "boxen"
-version = "1.0.0"
+name = "pyboxen"
+version = "0.1.0"
 description = "Beautiful, customizable boxes in your terminal using Python"
 authors = ["Skyascii <savioxavier112@gmail.com>"]
 license = "MIT"
