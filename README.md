@@ -170,6 +170,13 @@ If True, the box will expand to fill the entire terminal width, defaults to Fals
 
 > **Note**
 > `padding` and `margin` attributes can be either an int, a tuple of ints (with a total of either 2 elements or 4 elements)
+> Example:
+>
+> `2` - all of top, right, bottom, left
+>
+> `(2, 4)` - (top = bottom, right = left)
+>
+> `(2, 4, 6, 8)` - (top, right, bottom, left)
 
 ---
 
