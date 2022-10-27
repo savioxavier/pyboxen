@@ -117,6 +117,7 @@ print(
     )
 )
 ```
+![image](https://user-images.githubusercontent.com/38729705/198237935-d01857b8-f61a-42de-b7e5-9fdff59a9739.png)
 ---
 
 ## 🔮 API
