@@ -46,6 +46,10 @@ print(
 
 - Multiple texts and [Rich Renderables](https://github.com/Textualize/rich#rich-library)
 
+> You can even use Rich's special color style syntax for the text, title and subtitle as well
+>
+> Example: `[red]Hello[/red] [bold italic]World[/]`
+
 ```py
 from boxen import boxen
 
@@ -97,6 +101,22 @@ print(
 ```
 ![image](https://user-images.githubusercontent.com/38729705/198234218-0a4ccfd8-a858-4f84-a99d-f804b926f684.png)
 
+- Title and subtitles
+
+```py
+from boxen import boxen
+
+print(
+    boxen(
+        "Titles and subtitles!",
+        title="Hello, [black on cyan] World [/]",
+        subtitle="Cool subtitle goes here",
+        subtitle_alignment="center",
+        color="yellow",
+        padding=1,
+    )
+)
+```
 ---
 
 ## 🔮 API
