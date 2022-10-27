@@ -26,6 +26,7 @@ from boxen import boxen
 
 print(boxen("Python is cool!"))
 ```
+![image](https://user-images.githubusercontent.com/38729705/198232802-e41575c6-abd6-416d-9ba6-d1b1c31a2660.png)
 
 - Define options
 
@@ -41,6 +42,7 @@ print(
     )
 )
 ```
+![image](https://user-images.githubusercontent.com/38729705/198233490-52feeeba-efd3-4fe4-93cf-641d0f58fbf4.png)
 
 - Multiple texts and [Rich Renderables](https://github.com/Textualize/rich#rich-library)
 
@@ -53,7 +55,7 @@ print(
     boxen(
         "Python is cool!",
         "Yeah it totally is!",
-        "I love Python!"
+        "I [red]:heart:[/red]  [yellow bold]Python[/]!",  # You can even use Rich syntax here too!
         padding=1,
         margin=1,
         color="cyan",
@@ -93,6 +95,7 @@ print(
     )
 )
 ```
+![image](https://user-images.githubusercontent.com/38729705/198234218-0a4ccfd8-a858-4f84-a99d-f804b926f684.png)
 
 ---
 
