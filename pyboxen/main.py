@@ -22,19 +22,10 @@ ALL_BOXES: dict[str, Box] = {
     "square": box.SQUARE,
     "square_double_head": box.SQUARE_DOUBLE_HEAD,
     "minimal": box.MINIMAL,  # basically hidden box
-    "minimal_heavy_head": box.MINIMAL_HEAVY_HEAD,  # REMOVE: same as above
-    "minimal_double_head": box.MINIMAL_DOUBLE_HEAD,  # REMOVE: same as above
-    "simple": box.SIMPLE,  # REMOVE: same as above
-    "simple_head": box.SIMPLE_HEAD,  # REMOVE: same as above
-    "simple_heavy": box.SIMPLE_HEAVY,  # REMOVE: same as above
     "horizontals": box.HORIZONTALS,
     "rounded": box.ROUNDED,
     "heavy": box.HEAVY,
-    "heavy_edge": box.HEAVY_EDGE,  # REMOVE: same as above
-    "heavy_head": box.HEAVY_HEAD,  # REMOVE: does not make sense
     "double": box.DOUBLE,
-    "double_edge": box.DOUBLE_EDGE,  # REMOVE: same as above
-    "markdown": box.MARKDOWN,  # REMOVE: does not make sense
 }
 
 
