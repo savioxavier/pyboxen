@@ -77,7 +77,18 @@ POSITION_TYPES = ["left", "center", "right"]
 def boxen(
     *text: Any,
     color: str = "white",
-    style: str = "rounded",
+    style: Literal[
+        "ascii",
+        "ascii2",
+        "ascii_double_head",
+        "square",
+        "square_double_head",
+        "minimal",
+        "horizontals",
+        "rounded",
+        "heavy",
+        "double",
+    ] = "rounded",
     padding: Union[int, tuple[int]] = 0,
     margin: Union[int, tuple[int]] = 0,
     text_alignment: Literal["left", "center", "right"] = "center",
@@ -130,33 +141,25 @@ def boxen(
             raise TypeError("title must be a string")
         if subtitle and not isinstance(subtitle, str):
             raise TypeError("subtitle must be a string")
-        if (
-            style
-            and not isinstance(style, str)
-            and style.lower() not in ALL_BOXES.keys()
+        if style and (
+            not isinstance(style, str) or style.lower() not in ALL_BOXES.keys()
         ):
-            raise ValueError(f"style must be one of {ALL_BOXES.keys()}")
-        if (
-            text_alignment
-            and not isinstance(text_alignment, str)
-            and text_alignment not in POSITION_TYPES
+            raise ValueError(f"style must be one of {list(ALL_BOXES.keys())}")
+        if text_alignment and (
+            not isinstance(text_alignment, str) or text_alignment not in POSITION_TYPES
         ):
             raise ValueError(f"text alignment must be one of {POSITION_TYPES}")
-        if (
-            box_alignment
-            and not isinstance(box_alignment, str)
-            and box_alignment not in POSITION_TYPES
+        if box_alignment and (
+            not isinstance(box_alignment, str) or box_alignment not in POSITION_TYPES
         ):
             raise ValueError(f"box alignment must be one of {POSITION_TYPES}")
-        if (
-            title_alignment
-            and not isinstance(title_alignment, str)
+        if title_alignment and (
+            not isinstance(title_alignment, str)
             or title_alignment not in POSITION_TYPES
         ):
             raise ValueError(f"title alignment must be one of {POSITION_TYPES}")
-        if (
-            subtitle_alignment
-            and not isinstance(subtitle_alignment, str)
+        if subtitle_alignment and (
+            not isinstance(subtitle_alignment, str)
             or subtitle_alignment not in POSITION_TYPES
         ):
             raise ValueError(f"subtitle alignment must be one of {POSITION_TYPES}")
