@@ -140,7 +140,7 @@ Available options include:
 
 ```py
 color: str = "white",
-style: str = "rounded",
+style: Literal["ascii", "ascii2", "ascii_double_head", "square", "square_double_head", "minimal", "horizontals", "rounded", "heavy", "double"] = "rounded"
 padding: Union[int, tuple[int]] = 0,
 margin: Union[int, tuple[int]] = 0,
 text_alignment: Literal["left", "center", "right"] = "center",
