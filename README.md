@@ -3,6 +3,12 @@
 
 > **Create beautiful boxes in the terminal using Python**
 
+[![release](https://badge.fury.io/py/pyboxen.svg)](https://pypi.org/project/pyboxen)
+[![downloads](https://img.shields.io/pypi/dm/pyboxen.svg)](https://pypistats.org/packages/pyboxen)
+[![github](https://img.shields.io/github/license/savioxavier/pyboxen.svg)](https://github.com/savioxavier/pyboxen/blob/master/LICENSE)
+[![total downloads](https://static.pepy.tech/personalized-badge/pyboxen?period=total&units=none&left_color=grey&right_color=blue&left_text=total%20downloads)](https://pepy.tech/project/pyboxen)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 This package is a Python "port" of the popular NPM package [boxen](https://github.com/sindresorhus/boxen/).
 
 It's built on top of [Rich](https://github.com/Textualize/rich/), and features an API that would be familiar to the users of the NPM boxen package.
