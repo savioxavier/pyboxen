@@ -4,7 +4,7 @@ Package boxen allows you to create customizable boxes in the terminal
 It is built on top of Rich, and is fully compatible with most Rich styling syntax and Rich renderables
 """
 
-from typing import Any, Literal, Union
+from typing import Any, Literal, Union, Dict, Tuple
 
 from rich import box
 from rich.align import Align
@@ -15,7 +15,7 @@ from rich.panel import Panel
 
 console: Console = Console()
 
-ALL_BOXES: dict[str, Box] = {
+ALL_BOXES: Dict[str, Box] = {
     "ascii": box.ASCII,
     "ascii2": box.ASCII2,
     "ascii_double_head": box.ASCII_DOUBLE_HEAD,
@@ -29,7 +29,7 @@ ALL_BOXES: dict[str, Box] = {
 }
 
 
-def parse_size(size: Union[int, tuple[int, ...]], instance: str) -> tuple:
+def parse_size(size: Union[int, Tuple[int, ...]], instance: str) -> Tuple:
     if isinstance(size, tuple) and len(size) not in (2, 4):
         raise ValueError(
             f"{instance} tuples must have either a total of 2 or 4 elements in it"
@@ -63,11 +63,11 @@ def parse_size(size: Union[int, tuple[int, ...]], instance: str) -> tuple:
     return (top, right, bottom, left)
 
 
-def make_margin(margin: Union[int, tuple[int]]) -> tuple:
+def make_margin(margin: Union[int, Tuple[int]]) -> Tuple:
     return parse_size(margin, "margin")
 
 
-def make_padding(padding: Union[int, tuple[int]]) -> tuple:
+def make_padding(padding: Union[int, Tuple[int]]) -> Tuple:
     return parse_size(padding, "padding")
 
 
@@ -89,8 +89,8 @@ def boxen(
         "heavy",
         "double",
     ] = "rounded",
-    padding: Union[int, tuple[int]] = 0,
-    margin: Union[int, tuple[int]] = 0,
+    padding: Union[int, Tuple[int]] = 0,
+    margin: Union[int, Tuple[int]] = 0,
     text_alignment: Literal["left", "center", "right"] = "center",
     box_alignment: Literal["left", "center", "right"] = "left",
     title: str = None,
@@ -109,9 +109,9 @@ def boxen(
     :param style: The style of the box, defaults to rounded
     :type style: str (optional)
     :param padding: The padding between the text and the box in int or tuple of ints, defaults to 0
-    :type padding: Union[int, tuple[int]] (optional)
+    :type padding: Union[int, Tuple[int]] (optional)
     :param margin: The margin around the box in int or tuple of ints, defaults to 0
-    :type margin: Union[int, tuple[int]] (optional)
+    :type margin: Union[int, Tuple[int]] (optional)
     :param text_alignment: The alignment of the text inside the box, defaults to center
     :type text_alignment: Literal["left", "center", "right"] (optional)
     :param box_alignment: The alignment of the box in the terminal, defaults to left
